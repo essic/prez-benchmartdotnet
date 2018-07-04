@@ -10,6 +10,8 @@ namespace myBenchmark.Runner
         {
             Say.hello();
             new Class1().Say();
+            Console.Write("Press any key to exists ...");
+            Console.ReadKey();
         }
     }
 }
