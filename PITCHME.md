@@ -6,26 +6,32 @@
 
 ## What is BenchmarkDotNet ?
 
-- Benchmark library in .NET for Microbenchmark / Component benchmark |
+- .NET Library for Microbenchmark / Component benchmark |
 - .NET Framework (4.6+), .NET Core (2.0+), Mono, CoreRT |
 - C#, F#, VB |
 - Windows, Linux, OSX |
 
 ---
 
+## About microbenchmark ... 
+
+> core routine consists of a relatively small and specific piece of code. <br> Wikipedia
+
++++
+So it's about measuring time spent on a particuliar piece of code / method / function under given conditions.
+
+___
+
 ## Why do we Microbenchmark ?
 
 +++
-A code fragment has been identified as problematic in your application, so microbenchmark will help you test your improvement(s)
+A code section has been identified as problematic in your application, so microbenchmark will help you test your improvement(s)
 
 +++
 You suspect that somewhere in the code, some part is significantly more time consuming than other
 
 +++
 Performance is an issue (or feature) and you need to make sure of the effect of a specific piece of code / component at runtime.
-
-+++
-It does not replace profiling, performance measures on the whole application
 
 ---
 
@@ -49,3 +55,10 @@ failure to build / run the project with accurate parameters (Platform, Virutal m
 
 ## What does it do ?
 
+- You set up your code in methods with the correct anotation |
+- You might configure your project with necessary targets, if you run a multi-target benchmark |
+- BenchmarkDotNet create isolate project per anotation |
+- Does several launches of projects |
+- Runs benchmarking operations (including warmup) |
+- Creates reporting for you, calculate statistical data |
+- Gives you a nice short summary |
