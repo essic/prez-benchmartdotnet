@@ -4,7 +4,7 @@
 
 ---
 
-## What is BenchmarkDotNet ?
+### What is BenchmarkDotNet ?
 
 - .NET Library for Microbenchmark / Component benchmark |
 - .NET Framework (4.6+), .NET Core (2.0+), Mono, CoreRT |
@@ -13,7 +13,7 @@
 
 ---
 
-## About microbenchmark ... 
+### About microbenchmark ... 
 
 > "core routine consists of a relatively small and specific piece of code." <br> Wikipedia
 
@@ -38,7 +38,7 @@ Failure to calculate correct metrics
 
 ---
 
-## Benchmarking is hard ... It deals with it !
+### Benchmarking is hard ... It deals with it !
 
 Many parameters to account for => really easy to make mistakes  ...
 
@@ -56,15 +56,19 @@ failure to build / run the project with accurate parameters (Platform, Virutal m
 
 ---
 
-## What does it do ?
+### What does it do ?
 
 - You set up your code in methods with the correct anotation |
 - You might configure your project with necessary targets, if you run a multi-target benchmark |
 - BenchmarkDotNet create isolate project per anotation |
 
 +++
-## What does it do ?
+### What does it do ?
 - Does several launches of projects |
 - Runs benchmarking operations (including warmup) |
 - Creates reporting for you, calculate statistical data |
 - Gives you a nice short summary |
+
+---
+
+## Demo
