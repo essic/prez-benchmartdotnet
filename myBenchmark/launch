@@ -1,0 +1,1 @@
+dotnet run -c release --framework netcoreApp2.1 -p myBenchmark.Runner/myBenchmark.Runner.csproj
