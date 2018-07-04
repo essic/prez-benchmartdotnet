@@ -22,7 +22,7 @@ So it's about measuring time spent on a particuliar piece of code / method / fun
 
 ---
 
-## Why do we Microbenchmark ?
+### Why do we Microbenchmark ?
 
 +++
 A code section has been identified as problematic in your application, so microbenchmark will help you test your improvement(s)
@@ -63,6 +63,7 @@ failure to build / run the project with accurate parameters (Platform, Virutal m
 - BenchmarkDotNet create isolate project per anotation |
 
 +++
+## What does it do ?
 - Does several launches of projects |
 - Runs benchmarking operations (including warmup) |
 - Creates reporting for you, calculate statistical data |
