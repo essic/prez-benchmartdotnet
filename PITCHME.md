@@ -1,6 +1,6 @@
-# Bencharmking with BenchmarkDotNet !
+## Microbencharmking with BenchmarkDotNet !
 
-[@essiccf37](https://twitter.com/essiccf37) <br> July 201i8
+[@essiccf37](https://twitter.com/essiccf37) <br> July 2018
 
 ---
 
