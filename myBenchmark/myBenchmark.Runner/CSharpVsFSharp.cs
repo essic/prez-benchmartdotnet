@@ -6,6 +6,7 @@ namespace myBenchmark.Runner
 {
     [CoreJob(isBaseline:true),MonoJob,ClrJob]
     [RyuJitX64Job]
+    [Config(typeof(BenchmarkConfig))]
     public abstract class CSsharpVsFSharpBenchmarks
     {
         protected CSharp.Range cRange;

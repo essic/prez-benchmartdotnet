@@ -3,6 +3,7 @@ using BenchmarkDotNet.Running;
 
 namespace myBenchmark.Runner
 {
+    [Config(typeof(BenchmarkConfig))]
     public class FizzBuzzFSharpBenchmarks
     {
         private FSharp.FizzBuzzImplementations fsharpImpl = new FSharp.FizzBuzzImplementations(FizzBuzzLogic.Execute);
