@@ -5,7 +5,6 @@ using BenchmarkDotNet.Attributes.Jobs;
 namespace myBenchmark.Runner
 {
     [CoreJob(isBaseline:true),MonoJob,ClrJob]
-    [RyuJitX64Job]
     [Config(typeof(BenchmarkConfig))]
     public abstract class CSsharpVsFSharpBenchmarks
     {
@@ -27,7 +26,7 @@ namespace myBenchmark.Runner
 
     public class CSharpVsFSharpForLoopNoOptBenchmarks : CSsharpVsFSharpBenchmarks
     {
-        [Benchmark]
+        [Benchmark(Baseline=true)]
         public string[] CSharpBasicForLoopNoOpt() => csharpImpl.BasicForLoopVersion(cRange);
 
         [Benchmark]
@@ -36,7 +35,7 @@ namespace myBenchmark.Runner
 
     public class CSharpVsFSharpForLoopOptBenchmarks : CSsharpVsFSharpBenchmarks
     {
-        [Benchmark]
+        [Benchmark(Baseline=true)]
         public string[] CSharpBasicForLoopWithOpt() => csharpImpl.ForLoopWithAnInitializedArrayVersion(cRange);
 
         [Benchmark]
@@ -48,7 +47,7 @@ namespace myBenchmark.Runner
 
     public class CSharpVsFSharpNaturalBenchmarks : CSsharpVsFSharpBenchmarks
     {
-        [Benchmark]
+        [Benchmark(Baseline=true)]
         public string[] CSharpLinqVersion() => csharpImpl.LinqVersion(cRange);
 
         [Benchmark]
@@ -63,7 +62,7 @@ namespace myBenchmark.Runner
 
     public class CSharpVsFSharpParallelBenchmarks : CSsharpVsFSharpBenchmarks
     {
-        [Benchmark]
+        [Benchmark(Baseline=true)]
         public string[] CSharpParallelLinq() => csharpImpl.ParallelLinqVersion(cRange);
 
         [Benchmark]
