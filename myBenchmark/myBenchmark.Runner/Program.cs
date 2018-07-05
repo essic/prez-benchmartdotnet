@@ -6,26 +6,29 @@ namespace myBenchmark.Runner
 {
     public class FizzBuzz
     {
-        private CSharp.FizzBuzzLogic csharp = new CSharp.FizzBuzzLogic();
+        private CSharp.FizzBuzzLogic csharpImpl = new CSharp.FizzBuzzLogic();
         private CSharp.Range range;
 
         [Params(10,100,1000,10000)]
-        public int N;
+        public int MaxBoundNumber;
 
         [GlobalSetup]
         public void Setup()
         {
-            range = new CSharp.Range(1, N);
+            range = new CSharp.Range(1, MaxBoundNumber);
         }
 
-        [Benchmark]
-        public string[] NonOptimizedCSharpVersion() => csharp.NonOptimized(range);
+        [Benchmark(Description = "C# for loop version with no optimization")]
+        public string[] BasicForLoopVersion() => csharpImpl.BasicForLoopVersion(range);
 
-        [Benchmark]
-        public string[] Optimize1CSharpVersion() => csharp.Optimize1(range);
+        [Benchmark(Description = "C# for loop version with array pre-initialization")]
+        public string[] ForLoopWithAnInitializedArrayVersion() => csharpImpl.ForLoopWithAnInitializedArrayVersion(range);
+        
+        [Benchmark(Description = "C# linq version")]
+        public string[] LinqVersion() => csharpImpl.LinqVersion(range);
 
-        [Benchmark]
-        public string[] LinqVersion() => csharp.LinqVersion(range);
+        [Benchmark(Description = "C# parallel linq version")]
+        public string[] ParallelLinqVersion() => csharpImpl.ParallelLinqVersion(range);
 
     }
 

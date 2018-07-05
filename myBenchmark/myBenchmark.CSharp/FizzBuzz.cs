@@ -47,7 +47,7 @@ namespace myBenchmark.CSharp
             return result;
         }
 
-        public string[] NonOptimized(Range range)
+        public string[] BasicForLoopVersion(Range range)
         {
             var result = new List<string>();
             for (var number = range.Start; number <= range.End; number++)
@@ -57,7 +57,7 @@ namespace myBenchmark.CSharp
             return result.ToArray();
         }
 
-        public string[] Optimize1(Range range)
+        public string[] ForLoopWithAnInitializedArrayVersion(Range range)
         {
             var result = new string[range.End];
             for (var number = range.Start; number <= range.End; number++)
@@ -71,6 +71,13 @@ namespace myBenchmark.CSharp
         {
             return Enumerable.Range(range.Start, range.End)
                 .Select(FizzBuzzIt)
+                .ToArray();
+        }
+
+        public string[] ParallelLinqVersion(Range range)
+        {
+            return Enumerable.Range(range.Start, range.End)
+                .AsParallel().Select(FizzBuzzIt)
                 .ToArray();
         }
     }
