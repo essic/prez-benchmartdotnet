@@ -8,7 +8,7 @@ namespace myBenchmark.CSharp
     {
         public Range(int start, int end)
         {
-            if (start <= 0 || end < 0 && end <= start)
+            if ( (start <= 0 || end < 0) && end <= start)
                 throw new ArgumentException($"The interval [start,end] given is incorrect : [{start},{end}]");
 
             Start = start;
@@ -17,34 +17,15 @@ namespace myBenchmark.CSharp
 
         public int Start { get; }
         public int End { get; }
-
     }
 
-    public class FizzBuzzLogic
+    public class FizzImplementations
     {
-        private const string fizz = "Fizz";
-        private const string buzz = "Buzz";
+        private readonly Func<int, string> fizzBuzzLogic;
 
-        private string FizzBuzzIt(int number)
+        public FizzImplementations(Func<int,string> fizzBuzzLogic)
         {
-            string result;
-            if (number % 3 == 0 && number % 5 == 0)
-            {
-                result = fizz + buzz;
-            }
-            else if (number % 3 == 0)
-            {
-                result = fizz;
-            }
-            else if (number % 5 == 0)
-            {
-                result = buzz;
-            }
-            else
-            {
-                result = $"{number}";
-            }
-            return result;
+            this.fizzBuzzLogic = fizzBuzzLogic ?? throw new ArgumentNullException(nameof(fizzBuzzLogic));
         }
 
         public string[] BasicForLoopVersion(Range range)
@@ -52,7 +33,7 @@ namespace myBenchmark.CSharp
             var result = new List<string>();
             for (var number = range.Start; number <= range.End; number++)
             {
-                result.Add(FizzBuzzIt(number));
+                result.Add(fizzBuzzLogic(number));
             }
             return result.ToArray();
         }
@@ -62,7 +43,7 @@ namespace myBenchmark.CSharp
             var result = new string[range.End];
             for (var number = range.Start; number <= range.End; number++)
             {
-                    result[number - 1] = FizzBuzzIt(number);
+                    result[number - 1] = fizzBuzzLogic(number);
             }
             return result;
         }
@@ -70,14 +51,14 @@ namespace myBenchmark.CSharp
         public string[] LinqVersion(Range range)
         {
             return Enumerable.Range(range.Start, range.End)
-                .Select(FizzBuzzIt)
+                .Select(fizzBuzzLogic)
                 .ToArray();
         }
 
         public string[] ParallelLinqVersion(Range range)
         {
             return Enumerable.Range(range.Start, range.End)
-                .AsParallel().Select(FizzBuzzIt)
+                .AsParallel().Select(fizzBuzzLogic)
                 .ToArray();
         }
     }
