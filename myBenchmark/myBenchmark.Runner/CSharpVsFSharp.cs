@@ -44,4 +44,28 @@ namespace myBenchmark.Runner
 
 
     }
+
+    public class CSharpVsFSharpNaturalBenchmarks : CSsharpVsFSharpBenchmarks
+    {
+        [Benchmark(Baseline = true)]
+        public string[] CSharpLinqVersion() => csharpImpl.LinqVersion(cRange);
+
+        [Benchmark]
+        public string[] FSharpMapVersion() => fsharpImpl.mappingStyle(fRange);
+
+        [Benchmark]
+        public string[] FSharpRecursion() => fsharpImpl.recursiveStyle(fRange);
+
+        [Benchmark]
+        public string[] FSharpRecursionTailCallOpt() => fsharpImpl.recursiveStyleTailCallOptimized(fRange);
+    }
+
+    public class CSharpVsFSharpParallelBenchmarks : CSsharpVsFSharpBenchmarks
+    {
+        [Benchmark(Baseline = true)]
+        public string[] CSharpParallelLinq() => csharpImpl.ParallelLinqVersion(cRange);
+
+        [Benchmark]
+        public string[] FSharpParallelMap() => fsharpImpl.parallelMappingStyle(fRange);
+    }
 }

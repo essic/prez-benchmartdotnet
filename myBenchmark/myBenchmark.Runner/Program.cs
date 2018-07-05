@@ -13,6 +13,8 @@ namespace myBenchmark.Runner
                 , typeof(FizzBuzzFSharpBenchmarks)
                 , typeof(CSharpVsFSharpForLoopNoOptBenchmarks)
                 , typeof(CSharpVsFSharpForLoopOptBenchmarks)
+                , typeof(CSharpVsFSharpNaturalBenchmarks)
+                , typeof(CSharpVsFSharpParallelBenchmarks)
             });
             switcher.Run(args);
 
