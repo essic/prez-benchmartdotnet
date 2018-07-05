@@ -20,33 +20,58 @@ namespace myBenchmark.CSharp
 
     }
 
-    public class FizzBuzz
+    public class FizzBuzzLogic
     {
         private const string fizz = "Fizz";
         private const string buzz = "Buzz";
 
+        private string FizzBuzzIt(int number)
+        {
+            string result;
+            if (number % 3 == 0 && number % 5 == 0)
+            {
+                result = fizz + buzz;
+            }
+            else if (number % 3 == 0)
+            {
+                result = fizz;
+            }
+            else if (number % 5 == 0)
+            {
+                result = buzz;
+            }
+            else
+            {
+                result = $"{number}";
+            }
+            return result;
+        }
+
         public string[] NonOptimized(Range range)
         {
             var result = new List<string>();
-            for (var number = range.Start; number < range.End; number++)
+            for (var number = range.Start; number <= range.End; number++)
             {
-                if (number % 3 == 0 && number % 5 == 0)
-                {
-                    result.Add(fizz + buzz);
-                }
-                else if (number % 3 == 0)
-                {
-                    result.Add(fizz);          
-                }
-                else if (number % 5 == 0)
-                {
-                    result.Add(buzz);
-                } else
-                {
-                    result.Add($"{number}");
-                }
+                result.Add(FizzBuzzIt(number));
             }
             return result.ToArray();
+        }
+
+        public string[] Optimize1(Range range)
+        {
+            var result = new string[range.End];
+            for (var number = range.Start; number <= range.End; number++)
+            {
+                    result[number - 1] = FizzBuzzIt(number);
+            }
+            return result;
+        }
+
+        public string[] LinqVersion(Range range)
+        {
+            return Enumerable.Range(range.Start, range.End)
+                .Select(FizzBuzzIt)
+                .ToArray();
         }
     }
 }
