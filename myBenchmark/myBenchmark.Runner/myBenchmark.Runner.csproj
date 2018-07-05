@@ -5,6 +5,10 @@
     <ProjectReference Include="..\myBenchmark.FSharp\myBenchmark.FSharp.fsproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="BenchmarkDotNet" Version="0.10.14" />
+  </ItemGroup>
+
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.1</TargetFramework>
