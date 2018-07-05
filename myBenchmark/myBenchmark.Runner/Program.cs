@@ -17,9 +17,6 @@ namespace myBenchmark.Runner
                 , typeof(CSharpVsFSharpParallelBenchmarks)
             });
             switcher.Run(args);
-
-            Console.Write("Press any key to exists ...");
-            Console.ReadKey();
         }
     }
 }
