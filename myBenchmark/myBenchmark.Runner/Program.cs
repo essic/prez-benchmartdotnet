@@ -1,6 +1,7 @@
 ﻿using System;
 using BenchmarkDotNet.Running;
 
+
 namespace myBenchmark.Runner
 { 
     class Program
@@ -8,8 +9,10 @@ namespace myBenchmark.Runner
         static void Main(string[] args)
         {
             var switcher = new BenchmarkSwitcher(new[] {
-                typeof(FizzBuzzCSharpBenchmarks),
-                typeof(FizzBuzzFSharpBenchmarks)
+                  typeof(FizzBuzzCSharpBenchmarks)
+                , typeof(FizzBuzzFSharpBenchmarks)
+                , typeof(CSharpVsFSharpForLoopNoOptBenchmarks)
+                , typeof(CSharpVsFSharpForLoopOptBenchmarks)
             });
             switcher.Run(args);
 

@@ -28,7 +28,6 @@ namespace myBenchmark.Runner
 
         [Benchmark(Description = "C# parallel linq version")]
         public string[] ParallelLinqVersion() => csharpImpl.ParallelLinqVersion(range);
-
     }
 
 }
