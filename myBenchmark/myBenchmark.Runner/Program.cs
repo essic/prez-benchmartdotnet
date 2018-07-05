@@ -4,12 +4,12 @@ using BenchmarkDotNet.Running;
 
 namespace myBenchmark.Runner
 {
-    public class FizzBuzz
+    public class FizzBuzzBenchmarkForCSharp
     {
         private CSharp.FizzBuzzLogic csharpImpl = new CSharp.FizzBuzzLogic();
         private CSharp.Range range;
 
-        [Params(10,100,1000,10000)]
+        [Params(10,100,1000,10000,100000,1000000)]
         public int MaxBoundNumber;
 
         [GlobalSetup]
@@ -36,7 +36,7 @@ namespace myBenchmark.Runner
     {
         static void Main(string[] args)
         {
-            var summary = BenchmarkRunner.Run<FizzBuzz>();
+            var summary = BenchmarkRunner.Run<FizzBuzzBenchmarkForCSharp>();
             Console.Write("Press any key to exists ...");
             Console.ReadKey();
         }
