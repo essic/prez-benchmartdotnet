@@ -27,7 +27,7 @@ namespace myBenchmark.Runner
 
     public class CSharpVsFSharpForLoopNoOptBenchmarks : CSsharpVsFSharpBenchmarks
     {
-        [Benchmark(Baseline = true)]
+        [Benchmark]
         public string[] CSharpBasicForLoopNoOpt() => csharpImpl.BasicForLoopVersion(cRange);
 
         [Benchmark]
@@ -36,7 +36,7 @@ namespace myBenchmark.Runner
 
     public class CSharpVsFSharpForLoopOptBenchmarks : CSsharpVsFSharpBenchmarks
     {
-        [Benchmark(Baseline = true)]
+        [Benchmark]
         public string[] CSharpBasicForLoopWithOpt() => csharpImpl.ForLoopWithAnInitializedArrayVersion(cRange);
 
         [Benchmark]
@@ -48,7 +48,7 @@ namespace myBenchmark.Runner
 
     public class CSharpVsFSharpNaturalBenchmarks : CSsharpVsFSharpBenchmarks
     {
-        [Benchmark(Baseline = true)]
+        [Benchmark]
         public string[] CSharpLinqVersion() => csharpImpl.LinqVersion(cRange);
 
         [Benchmark]
@@ -63,7 +63,7 @@ namespace myBenchmark.Runner
 
     public class CSharpVsFSharpParallelBenchmarks : CSsharpVsFSharpBenchmarks
     {
-        [Benchmark(Baseline = true)]
+        [Benchmark]
         public string[] CSharpParallelLinq() => csharpImpl.ParallelLinqVersion(cRange);
 
         [Benchmark]
