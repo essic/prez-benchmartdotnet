@@ -42,7 +42,7 @@ module FSharp =
             let rec doTheFizzBuzz number max fAcc =
                 match number = max with
                 | true -> fAcc number
-                | false -> doTheFizzBuzz (number + 1) max (fun z -> fizzBuzzLogic number :: fAcc z)
+                | false -> (fun z -> fizzBuzzLogic z :: (doTheFizzBuzz (z + 1) max fAcc)) number
             doTheFizzBuzz range.Start range.End (fun z -> fizzBuzzLogic z :: []) |> Array.ofList
 
         member __.mappingStyle range =
