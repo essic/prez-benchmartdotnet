@@ -39,11 +39,11 @@ module FSharp =
             doTheFizzBuzz range.Start range.End |> Array.ofList
 
         member __.recursiveStyleTailCallOptimized range =
-            let rec doTheFizzBuzz number max fAcc =
-                match number = max with
-                | true -> fAcc number
-                | false -> (fun z -> fizzBuzzLogic z :: (doTheFizzBuzz (z + 1) max fAcc)) number
-            doTheFizzBuzz range.Start range.End (fun z -> fizzBuzzLogic z :: []) |> Array.ofList
+            let rec doTheFizzBuzz number cont =
+                match number = range.End with
+                | true -> cont [ fizzBuzzLogic number ]
+                | false -> doTheFizzBuzz (number + 1) (fun acc -> cont ( fizzBuzzLogic number :: acc) )
+            doTheFizzBuzz range.Start id |> Array.ofList
 
         member __.mappingStyle range =
             [|range.Start .. range.End|] |> Array.map fizzBuzzLogic
