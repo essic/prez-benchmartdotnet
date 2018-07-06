@@ -18,7 +18,7 @@ namespace myBenchmark.Runner
             range = FSharp.RangeModule.create(1, MaxBoundNumber);
         }
 
-        [Benchmark(Description = "F# for loop version with mutable variable, no opt")]
+        [Benchmark(Description = "F# for loop version with mutable variable, no opt",Baseline = true)]
         public string[] ImperativeStyleVersion() => fsharpImpl.imperativeForLoopVersion(range);
 
         [Benchmark(Description = "F# for loop version with mutable variable and array init")]

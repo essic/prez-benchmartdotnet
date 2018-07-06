@@ -18,7 +18,7 @@ namespace myBenchmark.Runner
             range = new CSharp.Range(1, MaxBoundNumber);
         }
 
-        [Benchmark(Description = "C# for loop version with no optimization")]
+        [Benchmark(Description = "C# for loop version with no optimization",Baseline = true)]
         public string[] BasicForLoopVersion() => csharpImpl.BasicForLoopVersion(range);
 
         [Benchmark(Description = "C# for loop version with array pre-initialization")]
