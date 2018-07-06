@@ -105,7 +105,6 @@ Coding Time !
 - BenchmarkDotNet is a highly configurable library for microbenchmark |
 - We do microbenchmark in addition of profiling and other performance related skills |
 - Already widely used, included but not limited : CoreCLR, Roslyn, EntityFrameworkCore, Orleans, Serilog, Autofac ... |
-- There are much more to be said about this library, please check [https://benchmarkdotnet.org](https://benchmarkdotnet.org) |
 
 ---
 ### Some links about all this ...
@@ -118,4 +117,4 @@ Coding Time !
 
 ### Thanks !
 
-Questions ?
+There are much more to be said about this library, please check [https://benchmarkdotnet.org](https://benchmarkdotnet.org) <br> Questions ?
