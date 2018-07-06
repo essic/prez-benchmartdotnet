@@ -79,13 +79,13 @@ Then for a Range from 1 to N (included) we apply the FizzBuzz logic, given diffe
 ```csharp
 string SomeImplementation(Range range); 
 ```
-@[1](C# signature of benchmark target)
+[1](C# signature of benchmark target)
 
 +++
-```fsharp
+```fs
 val someImplementation : Range -> string[]
 ```
-@[1](F# signature of benchmark target)
+[1](F# signature of benchmark target)
 +++
 
 # Coding Time !
