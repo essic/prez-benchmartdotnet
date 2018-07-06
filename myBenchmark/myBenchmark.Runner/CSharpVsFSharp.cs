@@ -54,9 +54,6 @@ namespace myBenchmark.Runner
         public string[] FSharpMapVersion() => fsharpImpl.mappingStyle(fRange);
 
         [Benchmark]
-        public string[] FSharpRecursion() => fsharpImpl.recursiveStyle(fRange);
-
-        [Benchmark]
         public string[] FSharpRecursionTailCallOpt() => fsharpImpl.recursiveStyleTailCallOptimized(fRange);
     }
 
