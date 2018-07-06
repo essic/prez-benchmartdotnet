@@ -80,11 +80,15 @@ Then for a Range from 1 to N (included) we apply the FizzBuzz logic, given diffe
 
 +++
 
+### C#
+
 ```csharp
 string SomeImplementation(Range range); 
 ```
 
 +++
+
+### F#
 
 ```fsharp
 val someImplementation : Range -> string[]
@@ -100,7 +104,6 @@ Coding Time !
 
 - BenchmarkDotNet is a highly configurable library for microbenchmark |
 - We do microbenchmark in addition of profiling and other performance related skills |
-- You get for free : process isolation, warmup, statistics, reporting ... |
 - Already widely used, included but not limited : CoreCLR, Roslyn, EntityFrameworkCore, Orleans, Serilog, Autofac ... |
 - There are much more to be said about this library, please check : [https://benchmarkdotnet.org](https://benchmarkdotnet.org) |
 
@@ -112,6 +115,7 @@ Coding Time !
 - [MSDN about the GC](https://msdn.microsoft.com/en-us/library/ms973837.aspx)
 
 ---
+
 ### Thanks !
 
 Questions ?
