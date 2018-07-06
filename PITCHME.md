@@ -76,16 +76,16 @@ We implement a simple FizzBuzz
 Then for a Range from 1 to N (included) we apply the FizzBuzz logic, given different implementation in C# and F#.
 
 +++
+@title[C# signature of benchmark target]
 ```csharp
 string SomeImplementation(Range range); 
 ```
-[1](C# signature of benchmark target)
 
 +++
+@title[F# signature of benchmark target]
 ```fs
 val someImplementation : Range -> string[]
 ```
-[1](F# signature of benchmark target)
 +++
 
 # Coding Time !
