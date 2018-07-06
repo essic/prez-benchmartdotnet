@@ -1,10 +1,14 @@
 ﻿using System;
 using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Attributes.Jobs;
+using BenchmarkDotNet.Attributes.Columns;
 
 namespace myBenchmark.Runner
 {
     [CoreJob(isBaseline:true),MonoJob,ClrJob]
+    [MinColumn,MaxColumn,MeanColumn,MedianColumn]
+    [RankColumn]
+    [MemoryDiagnoser]
     public abstract class CSsharpVsFSharpBenchmarks
     {
         protected CSharp.Range cRange;
@@ -39,9 +43,6 @@ namespace myBenchmark.Runner
 
         [Benchmark]
         public string[] FSharpImperativeForLoopWithOpt() => fsharpImpl.imperativeForLoopVersionWithArrayInitialization(fRange);
-
-
-
     }
 
     public class CSharpVsFSharpNaturalBenchmarks : CSsharpVsFSharpBenchmarks
