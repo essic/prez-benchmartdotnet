@@ -1,4 +1,4 @@
-namespace myBenchmark.Runner.Test
+namespace myBenchmark.Runner
 open System
 open Xunit
 open Swensen.Unquote
