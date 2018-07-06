@@ -1,10 +1,10 @@
-## Microbencharmking with BenchmarkDotNet !
+## Bencharmking with BenchmarkDotNet !
 
 [@essiccf37](https://twitter.com/essiccf37) <br> July 2018
 
 ---
 
-### What is BenchmarkDotNet ?
+### What's BenchmarkDotNet ?
 
 - .NET Library for Microbenchmark / Component benchmark |
 - .NET Framework (4.6+), .NET Core (2.0+), Mono, CoreRT |
@@ -13,16 +13,13 @@
 
 ---
 
-### About microbenchmark ... 
+> Microbenchmarking is about measuring the performance of something "small" 
 
-> "core routine consists of a relatively small and specific piece of code." <br> Wikipedia
-
-+++
-So it's about measuring time spent on a particuliar piece of code / method / function under given conditions.
+> It's not about optimization but about solving bottlenecks
 
 ---
 
-### Why do we Microbenchmark ?
+### When is it needed ? 
 
 +++
 A code section has been identified as problematic in your application
@@ -35,7 +32,7 @@ Performance is an issue or feature so you need to make sure of the effect of a s
 
 ---
 
-### Benchmarking is hard ... 
+### Benchmarking is hard 
 
 +++
 Intermediate to expert level on the runtime needed to make sure you measure the right thing.
@@ -47,22 +44,22 @@ Failure to isolate properly what needs benchmarking results in useless metrics
 Failure to make sufficient run of what needs benchmarking, makes metrics inacurate
 
 +++
-Even if you get all that right, reporting is what comes next !
+Even if you get all that right, reporting things correctly, is what comes next !
 
 ---
 
 ### BenchmarkingDotNet helps 
 
-- Does several launches of projects |
+- Launches several run of benchmark target(s) |
 - Runs benchmarking operations (including warmup) |
-- Creates reporting for you, calculate statistical data |
+- Calculates statistical data, creates reporting for you |
 - Gives you a nice short summary |
 
 ---
 
 ### Ok cool but what do I do ?
 
-- You set up your code in methods with the correct anotation |
+- You set up your code in methods with the correct annotation on the methods and class |
 - You might configure your project with necessary targets, if you run a multi-target benchmark |
 - You run the project in RELEASE mode and wait for the results |
 
@@ -80,7 +77,7 @@ Then for a Range from 1 to N (included) we apply the FizzBuzz logic, given diffe
 
 +++
 
-### C#
+### C\#
 
 ```csharp
 string SomeImplementation(Range range); 
@@ -88,7 +85,7 @@ string SomeImplementation(Range range);
 
 +++
 
-### F#
+### F\#
 
 ```fsharp
 val someImplementation : Range -> string[]
@@ -96,7 +93,7 @@ val someImplementation : Range -> string[]
 
 +++
 
-Coding Time !
+# Coding Time !
 
 ---
 
