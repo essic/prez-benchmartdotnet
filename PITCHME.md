@@ -51,20 +51,20 @@ Even if you get all that right, reporting is what comes next !
 
 ---
 
-### BenchmarkingDotNet help !
+### How does BenchmarkingDotNet helps ?
 
-It deals with all this complexity, gives you ways of customize all that if needed, let's you focus on your code !
-
-+++
-- You set up your code in methods with the correct anotation |
-- You might configure your project with necessary targets, if you run a multi-target benchmark |
-- BenchmarkDotNet create isolate project per anotation |
-
-### How ?
 - Does several launches of projects |
 - Runs benchmarking operations (including warmup) |
 - Creates reporting for you, calculate statistical data |
 - Gives you a nice short summary |
+
+---
+
+### Ok cool but what do I do ?
+
+- You set up your code in methods with the correct anotation |
+- You might configure your project with necessary targets, if you run a multi-target benchmark |
+- You run the project in RELEASE mode and wait for the results |
 
 ---
 
@@ -87,7 +87,7 @@ string SomeImplementation(Range range);
 +++
 
 ```fsharp
-someImplementation : Range -> String array
+val someImplementation : Range -> string[]
 ```
 
 +++
