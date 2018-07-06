@@ -28,16 +28,14 @@ So it's about measuring time spent on a particuliar piece of code / method / fun
 A code section has been identified as problematic in your application
 
 +++
-You suspect that some code is significantly more time consuming than the rest
+You suspect that some code is more time consuming than it should 
 
 +++
-Performance is an issue or feature so  you need to make sure of the effect of a specific piece of code / component at runtime
+Performance is an issue or feature so you need to make sure of the effect of a specific piece of code / component at runtime
 
 ---
 
 ### Benchmarking is hard ... 
-
-Many parameters to account, like (but not limited)...
 
 +++
 Intermediate to expert level on the runtime needed to make sure you measure the right thing.
@@ -53,7 +51,7 @@ Even if you get all that right, reporting is what comes next !
 
 ---
 
-### So What does BenchmarkingDotNet do ??
+### BenchmarkingDotNet help !
 
 It deals with all this complexity, gives you ways of customize all that if needed, let's you focus on your code !
 
@@ -62,8 +60,7 @@ It deals with all this complexity, gives you ways of customize all that if neede
 - You might configure your project with necessary targets, if you run a multi-target benchmark |
 - BenchmarkDotNet create isolate project per anotation |
 
-+++
-### How does it do ?
+### How ?
 - Does several launches of projects |
 - Runs benchmarking operations (including warmup) |
 - Creates reporting for you, calculate statistical data |
@@ -83,13 +80,13 @@ Then for a Range from 1 to N (included) we apply the FizzBuzz logic, given diffe
 
 +++
 
-```
+```csharp
 string SomeImplementation(Range range); 
 ```
 
 +++
 
-```
+```fsharp
 someImplementation : Range -> String array
 ```
 
