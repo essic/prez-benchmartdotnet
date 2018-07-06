@@ -1,0 +1,3 @@
+dotnet run -c release --framework netcoreApp2.1 -p ./myBenchmark/myBenchmark.Runner/myBenchmark.Runner.csproj -- 0
+rm -rf csharp-benchmark-results
+mv BenchmarkDotNet.Artifacts csharp-benchmark-results
