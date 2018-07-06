@@ -5,7 +5,6 @@ using BenchmarkDotNet.Attributes.Jobs;
 namespace myBenchmark.Runner
 {
     [CoreJob(isBaseline:true),MonoJob,ClrJob]
-    [Config(typeof(BenchmarkConfig))]
     public abstract class CSsharpVsFSharpBenchmarks
     {
         protected CSharp.Range cRange;
