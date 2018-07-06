@@ -17,39 +17,39 @@ BenchmarkDotNet=v0.10.14, OS=macOS High Sierra 10.13.5 (17F77) [Darwin 17.6.0]
 Intel Core i7-4770HQ CPU 2.20GHz (Haswell), 1 CPU, 8 logical and 4 physical cores
 .NET Core SDK=2.1.301
   [Host]     : .NET Core 2.1.1 (CoreCLR 4.6.26606.02, CoreFX 4.6.26606.05), 64bit RyuJIT
-  Job-SMESYZ : .NET Core 2.1.1 (CoreCLR 4.6.26606.02, CoreFX 4.6.26606.05), 64bit RyuJIT
+  Job-SRURJG : .NET Core 2.1.1 (CoreCLR 4.6.26606.02, CoreFX 4.6.26606.05), 64bit RyuJIT
 </code></pre>
 <pre><code>IterationTime=200.0000 ms  LaunchCount=1  TargetCount=1  
 WarmupCount=5  
 </code></pre>
 
 <table>
-<thead><tr><th>                                       Method</th><th>MaxBoundNumber</th><th>      Mean</th><th>Error</th><th>Gen 0</th><th>Gen 1</th><th>Gen 2</th><th>Allocated</th>
+<thead><tr><th>                                       Method</th><th>MaxBoundNumber</th><th>    Mean</th><th>Error</th><th>Scaled</th><th>Rank</th><th>Gen 0</th><th>Gen 1</th><th>Gen 2</th><th>Allocated</th>
 </tr>
-</thead><tbody><tr><td>&#39;C# for loop version with no optimization&#39;</td><td>10</td><td>1,058.0 ns</td><td>NA</td><td>0.1133</td><td>-</td><td>-</td><td>720 B</td>
-</tr><tr><td>&#39;C# for loop version with array pre-initialization&#39;</td><td>10</td><td>826.7 ns</td><td>NA</td><td>0.0574</td><td>-</td><td>-</td><td>384 B</td>
-</tr><tr><td>&#39;C# linq version&#39;</td><td>10</td><td>1,110.0 ns</td><td>NA</td><td>0.0713</td><td>-</td><td>-</td><td>480 B</td>
-</tr><tr><td>&#39;C# parallel linq version&#39;</td><td>10</td><td>21,156.6 ns</td><td>NA</td><td>1.6419</td><td>-</td><td>-</td><td>5711 B</td>
-</tr><tr><td>&#39;C# for loop version with no optimization&#39;</td><td>100</td><td>9,650.9 ns</td><td>NA</td><td>0.9506</td><td>-</td><td>-</td><td>5992 B</td>
-</tr><tr><td>&#39;C# for loop version with array pre-initialization&#39;</td><td>100</td><td>8,780.0 ns</td><td>NA</td><td>0.5670</td><td>-</td><td>-</td><td>3792 B</td>
-</tr><tr><td>&#39;C# linq version&#39;</td><td>100</td><td>9,517.4 ns</td><td>NA</td><td>0.6155</td><td>-</td><td>-</td><td>3888 B</td>
-</tr><tr><td>&#39;C# parallel linq version&#39;</td><td>100</td><td>30,229.2 ns</td><td>NA</td><td>2.4883</td><td>-</td><td>-</td><td>7866 B</td>
-</tr><tr><td>&#39;C# for loop version with no optimization&#39;</td><td>1000</td><td>93,333.5 ns</td><td>NA</td><td>8.3333</td><td>0.9259</td><td>-</td><td>54480 B</td>
-</tr><tr><td>&#39;C# for loop version with array pre-initialization&#39;</td><td>1000</td><td>89,027.2 ns</td><td>NA</td><td>5.8036</td><td>0.4464</td><td>-</td><td>37872 B</td>
-</tr><tr><td>&#39;C# linq version&#39;</td><td>1000</td><td>96,196.4 ns</td><td>NA</td><td>5.6818</td><td>0.4735</td><td>-</td><td>37968 B</td>
-</tr><tr><td>&#39;C# parallel linq version&#39;</td><td>1000</td><td>88,193.0 ns</td><td>NA</td><td>11.8838</td><td>1.7606</td><td>-</td><td>21741 B</td>
-</tr><tr><td>&#39;C# for loop version with no optimization&#39;</td><td>10000</td><td>1,688,984.9 ns</td><td>NA</td><td>117.1875</td><td>62.5000</td><td>39.0625</td><td>679536 B</td>
-</tr><tr><td>&#39;C# for loop version with array pre-initialization&#39;</td><td>10000</td><td>957,952.9 ns</td><td>NA</td><td>62.5000</td><td>26.7857</td><td>-</td><td>417072 B</td>
-</tr><tr><td>&#39;C# linq version&#39;</td><td>10000</td><td>1,042,967.7 ns</td><td>NA</td><td>62.5000</td><td>31.2500</td><td>-</td><td>417168 B</td>
-</tr><tr><td>&#39;C# parallel linq version&#39;</td><td>10000</td><td>609,047.6 ns</td><td>NA</td><td>122.0238</td><td>56.5476</td><td>-</td><td>154089 B</td>
-</tr><tr><td>&#39;C# for loop version with no optimization&#39;</td><td>100000</td><td>22,745,721.9 ns</td><td>NA</td><td>2250.0000</td><td>2250.0000</td><td>375.0000</td><td>6306904 B</td>
-</tr><tr><td>&#39;C# for loop version with array pre-initialization&#39;</td><td>100000</td><td>16,250,596.9 ns</td><td>NA</td><td>562.5000</td><td>312.5000</td><td>187.5000</td><td>4209072 B</td>
-</tr><tr><td>&#39;C# linq version&#39;</td><td>100000</td><td>16,722,653.1 ns</td><td>NA</td><td>562.5000</td><td>312.5000</td><td>187.5000</td><td>4209489 B</td>
-</tr><tr><td>&#39;C# parallel linq version&#39;</td><td>100000</td><td>14,737,762.5 ns</td><td>NA</td><td>1000.0000</td><td>625.0000</td><td>437.5000</td><td>1493230 B</td>
-</tr><tr><td>&#39;C# for loop version with no optimization&#39;</td><td>1000000</td><td>244,838,478.1 ns</td><td>NA</td><td>6562.5000</td><td>2500.0000</td><td>1312.5000</td><td>58907664 B</td>
-</tr><tr><td>&#39;C# for loop version with array pre-initialization&#39;</td><td>1000000</td><td>220,512,834.4 ns</td><td>NA</td><td>6437.5000</td><td>2125.0000</td><td>1062.5000</td><td>42129896 B</td>
-</tr><tr><td>&#39;C# linq version&#39;</td><td>1000000</td><td>231,425,090.6 ns</td><td>NA</td><td>6437.5000</td><td>2125.0000</td><td>1062.5000</td><td>42129310 B</td>
-</tr><tr><td>&#39;C# parallel linq version&#39;</td><td>1000000</td><td>216,920,343.8 ns</td><td>NA</td><td>6562.5000</td><td>2687.5000</td><td>1062.5000</td><td>14734416 B</td>
+</thead><tbody><tr><td>&#39;C# for loop version with no optimization&#39;</td><td>10</td><td>1.466 us</td><td>NA</td><td>1.00</td><td>3</td><td>0.1103</td><td>-</td><td>-</td><td>720 B</td>
+</tr><tr><td>&#39;C# for loop version with array pre-initialization&#39;</td><td>10</td><td>1.099 us</td><td>NA</td><td>0.75</td><td>1</td><td>0.0572</td><td>-</td><td>-</td><td>384 B</td>
+</tr><tr><td>&#39;C# linq version&#39;</td><td>10</td><td>1.299 us</td><td>NA</td><td>0.89</td><td>2</td><td>0.0758</td><td>-</td><td>-</td><td>480 B</td>
+</tr><tr><td>&#39;C# parallel linq version&#39;</td><td>10</td><td>36.722 us</td><td>NA</td><td>25.04</td><td>4</td><td>1.5783</td><td>-</td><td>-</td><td>5874 B</td>
+</tr><tr><td>&#39;C# for loop version with no optimization&#39;</td><td>100</td><td>11.968 us</td><td>NA</td><td>1.00</td><td>3</td><td>0.9139</td><td>-</td><td>-</td><td>5992 B</td>
+</tr><tr><td>&#39;C# for loop version with array pre-initialization&#39;</td><td>100</td><td>11.475 us</td><td>NA</td><td>0.96</td><td>2</td><td>0.5603</td><td>-</td><td>-</td><td>3792 B</td>
+</tr><tr><td>&#39;C# linq version&#39;</td><td>100</td><td>9.756 us</td><td>NA</td><td>0.82</td><td>1</td><td>0.6100</td><td>-</td><td>-</td><td>3888 B</td>
+</tr><tr><td>&#39;C# parallel linq version&#39;</td><td>100</td><td>28.683 us</td><td>NA</td><td>2.40</td><td>4</td><td>2.5056</td><td>-</td><td>-</td><td>7820 B</td>
+</tr><tr><td>&#39;C# for loop version with no optimization&#39;</td><td>1000</td><td>93.448 us</td><td>NA</td><td>1.00</td><td>1</td><td>8.4586</td><td>0.9398</td><td>-</td><td>54480 B</td>
+</tr><tr><td>&#39;C# for loop version with array pre-initialization&#39;</td><td>1000</td><td>101.876 us</td><td>NA</td><td>1.09</td><td>3</td><td>5.6424</td><td>0.4340</td><td>-</td><td>37872 B</td>
+</tr><tr><td>&#39;C# linq version&#39;</td><td>1000</td><td>95.054 us</td><td>NA</td><td>1.02</td><td>2</td><td>5.7692</td><td>0.4808</td><td>-</td><td>37968 B</td>
+</tr><tr><td>&#39;C# parallel linq version&#39;</td><td>1000</td><td>93.497 us</td><td>NA</td><td>1.00</td><td>1</td><td>12.1528</td><td>1.7361</td><td>-</td><td>22040 B</td>
+</tr><tr><td>&#39;C# for loop version with no optimization&#39;</td><td>10000</td><td>1,725.477 us</td><td>NA</td><td>1.00</td><td>4</td><td>117.1875</td><td>62.5000</td><td>39.0625</td><td>679536 B</td>
+</tr><tr><td>&#39;C# for loop version with array pre-initialization&#39;</td><td>10000</td><td>956.156 us</td><td>NA</td><td>0.55</td><td>2</td><td>62.5000</td><td>28.8462</td><td>-</td><td>417072 B</td>
+</tr><tr><td>&#39;C# linq version&#39;</td><td>10000</td><td>1,027.373 us</td><td>NA</td><td>0.60</td><td>3</td><td>62.5000</td><td>28.8462</td><td>-</td><td>417168 B</td>
+</tr><tr><td>&#39;C# parallel linq version&#39;</td><td>10000</td><td>622.452 us</td><td>NA</td><td>0.36</td><td>1</td><td>122.0238</td><td>59.5238</td><td>-</td><td>157267 B</td>
+</tr><tr><td>&#39;C# for loop version with no optimization&#39;</td><td>100000</td><td>17,426.597 us</td><td>NA</td><td>1.00</td><td>4</td><td>1062.5000</td><td>875.0000</td><td>687.5000</td><td>6307108 B</td>
+</tr><tr><td>&#39;C# for loop version with array pre-initialization&#39;</td><td>100000</td><td>16,336.269 us</td><td>NA</td><td>0.94</td><td>2</td><td>562.5000</td><td>312.5000</td><td>187.5000</td><td>4209322 B</td>
+</tr><tr><td>&#39;C# linq version&#39;</td><td>100000</td><td>16,821.325 us</td><td>NA</td><td>0.97</td><td>3</td><td>562.5000</td><td>312.5000</td><td>187.5000</td><td>4209169 B</td>
+</tr><tr><td>&#39;C# parallel linq version&#39;</td><td>100000</td><td>14,183.834 us</td><td>NA</td><td>0.81</td><td>1</td><td>1125.0000</td><td>625.0000</td><td>500.0000</td><td>1477394 B</td>
+</tr><tr><td>&#39;C# for loop version with no optimization&#39;</td><td>1000000</td><td>247,538.334 us</td><td>NA</td><td>1.00</td><td>4</td><td>6375.0000</td><td>2500.0000</td><td>1187.5000</td><td>58907792 B</td>
+</tr><tr><td>&#39;C# for loop version with array pre-initialization&#39;</td><td>1000000</td><td>232,897.756 us</td><td>NA</td><td>0.94</td><td>2</td><td>6375.0000</td><td>2125.0000</td><td>1000.0000</td><td>42129472 B</td>
+</tr><tr><td>&#39;C# linq version&#39;</td><td>1000000</td><td>236,683.906 us</td><td>NA</td><td>0.96</td><td>3</td><td>6375.0000</td><td>2125.0000</td><td>1000.0000</td><td>42129594 B</td>
+</tr><tr><td>&#39;C# parallel linq version&#39;</td><td>1000000</td><td>217,678.291 us</td><td>NA</td><td>0.88</td><td>1</td><td>6250.0000</td><td>2562.5000</td><td>875.0000</td><td>14463091 B</td>
 </tr></tbody></table>
 </body>
 </html>
