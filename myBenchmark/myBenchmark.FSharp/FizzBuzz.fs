@@ -19,10 +19,12 @@ module FSharp =
             _fizzBuzzLogic.Invoke(number)
             
         member __.imperativeForLoopVersion range  =
-            let mutable results = Array.empty<string>
+            let mutable results = List.empty //Array.empty<string>
             for number = range.Start to range.End do
-                results <- [| fizzBuzzLogic number |] |> Array.append results
-            results 
+                //Does not work why ??
+                //results <- [| fizzBuzzLogic number |] |> Array.append results 
+                results <- fizzBuzzLogic number :: results
+            results |> Array.ofList
 
         member __.imperativeForLoopVersionWithArrayInitialization range =
             let results = Array.init range.End (fun _ -> "")

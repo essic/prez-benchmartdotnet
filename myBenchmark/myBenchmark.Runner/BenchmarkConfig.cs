@@ -16,8 +16,6 @@ namespace myBenchmark.Runner
                         .WithIterationTime(TimeInterval.FromMilliseconds(200))
                         .WithWarmupCount(5)
                         .WithTargetCount(1));
-                        //.WithWarmupCount(10)
-                        //.WithTargetCount(10));
         }
     }
 }
