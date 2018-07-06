@@ -104,12 +104,14 @@ Coding Time !
 - Already widely used, included but not limited : CoreCLR, Roslyn, EntityFrameworkCore, Orleans, Serilog, Autofac ... |
 - There are much more to be said about this library, please check : [https://benchmarkdotnet.org](https://benchmarkdotnet.org) |
 
+---
 ### Some links about all this ...
 
 - [Proper Benchmarking To Diagnose And Solve A .NET Serialization Bottleneck](http://www.hanselman.com/blog/ProperBenchmarkingToDiagnoseAndSolveANETSerializationBottleneck.aspx)
 - [A very good tutorial, I wished I've seen before starting this](https://dotnetcoretutorials.com/2017/12/04/benchmarking-net-core-code-benchmarkdotnet/)
 - [MSDN about the GC](https://msdn.microsoft.com/en-us/library/ms973837.aspx)
 
+---
 ### Thanks !
 
 Questions ?
