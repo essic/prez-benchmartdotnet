@@ -1,9 +1,11 @@
 ﻿using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Running;
+using BenchmarkDotNet.Attributes.Columns;
 
 namespace myBenchmark.Runner
 {
     [Config(typeof(BenchmarkConfig))]
+    [RankColumn]
     public class FizzBuzzFSharpBenchmarks
     {
         private FSharp.FizzBuzzImplementations fsharpImpl = new FSharp.FizzBuzzImplementations(FizzBuzzLogic.Execute);
