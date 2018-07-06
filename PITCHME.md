@@ -50,7 +50,7 @@ Even if you get all that right, reporting things correctly, is what comes next !
 
 ### BenchmarkingDotNet helps 
 
-- Launches several run of benchmark target(s) |
+- Gives you a extensive api to create and parameter your benchmark |
 - Runs benchmarking operations (including warmup) |
 - Calculates statistical data, creates reporting for you |
 - Gives you a nice short summary |
@@ -60,7 +60,7 @@ Even if you get all that right, reporting things correctly, is what comes next !
 ### Ok cool but what do I do ?
 
 - You set up your code in methods with the correct annotation on the methods and class |
-- You might configure your project with necessary targets, if you run a multi-target benchmark |
+- You might configure your project (csproj / fsproj / vbproj) with necessary targets, if you run a multi-target benchmark |
 - You run the project in RELEASE mode and wait for the results |
 
 ---
@@ -76,21 +76,16 @@ We implement a simple FizzBuzz
 Then for a Range from 1 to N (included) we apply the FizzBuzz logic, given different implementation in C# and F#.
 
 +++
-
-### C\#
-
 ```csharp
 string SomeImplementation(Range range); 
 ```
+@[1](C# signature of benchmark target)
 
 +++
-
-### F\#
-
 ```fsharp
 val someImplementation : Range -> string[]
 ```
-
+@[1](F# signature of benchmark target)
 +++
 
 # Coding Time !
