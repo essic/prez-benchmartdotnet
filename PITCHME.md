@@ -25,45 +25,45 @@ So it's about measuring time spent on a particuliar piece of code / method / fun
 ### Why do we Microbenchmark ?
 
 +++
-A code section has been identified as problematic in your application, so microbenchmark will help you test your improvement(s)
+A code section has been identified as problematic in your application
 
 +++
-You suspect that somewhere in the code, some part is significantly more time consuming than other
+You suspect that some code is significantly more time consuming than the rest
 
 +++
-Performance is an issue (or feature) and you need to make sure of the effect of a specific piece of code / component at runtime
-
-+++
-Failure to calculate correct metrics
+Performance is an issue or feature so  you need to make sure of the effect of a specific piece of code / component at runtime
 
 ---
 
-### Benchmarking is hard ... It deals with it !
+### Benchmarking is hard ... 
 
-Many parameters to account for => really easy to make mistakes  ...
-
-+++
-failure to isolate properly what needs benchmarking 
+Many parameters to account, like (but not limited)...
 
 +++
-failure to make sufficient run so that the benchmark is effecient and pertinent
+Intermediate to expert level on the runtime needed to make sure you measure the right thing.
 
 +++
-failure / mistake of not including warm up phase, when necessary,  before measuring performance 
+Failure to isolate properly what needs benchmarking results in useless metrics 
 
 +++
-failure to build / run the project with accurate parameters (Platform, Virutal machine selection, Choosing JIT ...)
+Failure to make sufficient run of what needs benchmarking, makes metrics inacurate
+
++++
+Even if you get all that right, reporting is what comes next !
 
 ---
 
-### What does it do ?
+### So What does BenchmarkingDotNet do ??
 
+It deals with all this complexity, gives you ways of customize all that if needed, let's you focus on your code !
+
++++
 - You set up your code in methods with the correct anotation |
 - You might configure your project with necessary targets, if you run a multi-target benchmark |
 - BenchmarkDotNet create isolate project per anotation |
 
 +++
-### What does it do ?
+### How does it do ?
 - Does several launches of projects |
 - Runs benchmarking operations (including warmup) |
 - Creates reporting for you, calculate statistical data |
