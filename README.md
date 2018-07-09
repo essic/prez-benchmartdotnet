@@ -1,6 +1,4 @@
-# prez-benchmartdotnet
-
-A short presentation and demo on BenchmarkDotNet.
+## A short presentation and demo on BenchmarkDotNet.
 
 This project targets .NET 4.7.2 and .Net Core 2.1.
 We use the version 0.10.14 of BenchmarkDotNet here.
@@ -22,11 +20,11 @@ List of benchmarks presents
 Please note that benchmark target must be installed as a prerequisite. <br>
 However if not presents, it will keep going.
 
-You can find some test in the repo and pre-computed benchmarks in the 'demo' folder.
+You can find some test in the repo and benchmarks results in the 'demo' folder.
 
-## Also note that the recursive implementation in F# with no tail call optimisation will cause an error during benchmark. 
-## It is done on purpose !
+You can view the presentation which goes along the demo, [here](https://gitpitch.com/essic/prez-benchmarkdotnet/master?grs=github&t=black)
 
 Feel free to fork or drop an issue if needed.
 
-You can view the presentation which goes along the demo, [here](https://gitpitch.com/essic/prez-benchmarkdotnet/master?grs=github&t=black)
+## Also note that the recursive implementation in F# with no tail call optimisation will cause an error during benchmark, on purpose !
+
