@@ -28,3 +28,5 @@ You can find some test in the repo and pre-computed benchmarks in the 'demo' fol
 ## It is done on purpose !
 
 Feel free to fork or drop an issue if needed.
+
+You can view the presentation which goes along the demo, [here](https://gitpitch.com/essic/prez-benchmarkdotnet/master?grs=github&t=black)

@@ -90,7 +90,8 @@ val someImplementation : Range -> string[]
 +++
 
 # Coding Time !
-
+#### CLick [here](https://github.com/essic/prez-benchmarkdotnet/tree/master/demo) to access the benchmark results on GitHub 
+#### Click [here](https://github.com/essic/prez-benchmarkdotnet/tree/master/myBenchmark) to view the code on GitHub
 ---
 
 ### In short
