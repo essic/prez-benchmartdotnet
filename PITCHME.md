@@ -7,15 +7,15 @@
 ### What's BenchmarkDotNet ?
 
 - .NET Library for Microbenchmark / Component benchmark |
-- .NET Framework (4.6+), .NET Core (2.0+), Mono, CoreRT |
-- C#, F#, VB |
-- Windows, Linux, OSX |
+- SDK available on C#, F#, VB |
+- Runs with .NET Framework (4.6+), .NET Core (2.0+), Mono, CoreRT |
+- Runs on Windows, Linux, OSX |
 
 ---
 
 > Microbenchmarking is about measuring the performance of something "small" 
 
-> It's not about optimization but about solving bottlenecks
+> It's about solving bottlenecks. There's a relation with Optimization but the purpose is different
 
 ---
 
@@ -28,17 +28,17 @@ A code section has been identified as problematic in your application
 You suspect that some code is more time consuming than it should 
 
 +++
-Performance is an issue or feature so you need to make sure of the effect of a specific piece of code / component at runtime
+Performance is a feature so you need to make sure of the comportement of a specific piece of code under load
 
 ---
 
 ### Benchmarking is hard 
 
 +++
-Intermediate to expert level on the runtime needed to make sure you measure the right thing.
+Intermediate to expert level on the runtime is needed to make sure you measure the right thing. <br /> Stopwatch is far from being sufficient to get correct metrics 
 
 +++
-Failure to isolate properly what needs benchmarking results in useless metrics 
+Failure to isolate properly what needs benchmarking, makes metrics useless 
 
 +++
 Failure to make sufficient run of what needs benchmarking, makes metrics inacurate
@@ -50,7 +50,7 @@ Even if you get all that right, reporting things correctly, is what comes next !
 
 ### BenchmarkingDotNet helps 
 
-- Gives you a extensive api to create and parameter your benchmark |
+- Gives you a extensive SDK to create and customize your benchmark |
 - Runs benchmarking operations (including warmup) |
 - Calculates statistical data, creates reporting for you |
 - Gives you a nice short summary |
@@ -59,15 +59,15 @@ Even if you get all that right, reporting things correctly, is what comes next !
 
 ### Ok cool but what do I do ?
 
-- You set up your code in methods with the correct annotation on the methods and class |
-- You might configure your project (csproj / fsproj / vbproj) with necessary targets, if you run a multi-target benchmark |
+- You set up your code in methods with the needed annotation on the methods and class |
+- You might configure your project (csproj / fsproj / vbproj) with necessary targets, especially if you run a multi-target benchmark |
 - You run the project in RELEASE mode and wait for the results |
 
 ---
 
 ## Demo
 
-C# vs F#
+C# vs F# <br /> Siblings rivalery unleashed
 
 +++
 We implement a simple FizzBuzz 
