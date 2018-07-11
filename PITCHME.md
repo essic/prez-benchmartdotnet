@@ -79,7 +79,7 @@ Then for a Range from 1 to N (included) we apply the FizzBuzz logic, given diffe
 C# signature of benchmark target
 
 ```csharp
-string SomeImplementation(Range range); 
+string[] SomeImplementation(Range range); 
 ```
 
 +++
