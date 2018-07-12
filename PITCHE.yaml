@@ -1,5 +1,3 @@
 remote-control: true
-
-#OSX Key codes
-remote-control-prevkey: 125
-remote-control-nextkey: 126
+remote-control-prevkey: 38
+remote-control-nextkey: 40
