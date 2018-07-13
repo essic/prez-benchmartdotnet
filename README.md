@@ -1,5 +1,7 @@
 ## A short presentation and demo on BenchmarkDotNet.
 
+You can view the presentation which goes along the demo, [here](https://gitpitch.com/essic/prez-benchmarkdotnet/master)
+
 This project targets .NET 4.7.2 and .Net Core 2.1.
 We use the version 0.10.14 of BenchmarkDotNet here.
 
@@ -21,8 +23,6 @@ Please note that benchmark target must be installed as a prerequisite. <br>
 However if not presents, it will keep going.
 
 You can find some test in the repo and benchmarks results in the 'demo' folder.
-
-You can view the presentation which goes along the demo, [here](https://gitpitch.com/essic/prez-benchmarkdotnet/master?grs=github&t=black)
 
 Feel free to fork or drop an issue if needed.
 
