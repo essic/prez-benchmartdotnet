@@ -70,7 +70,8 @@ Even if you get all that right, reporting things correctly, is what comes next !
 
 ## Demo
 
-### `C#` vs `F#` <br /> Siblings rivalery unleashed
+### `C#` vs `F#` 
+#### Siblings rivalery unleashed
 
 +++
 We implement a simple FizzBuzz 
