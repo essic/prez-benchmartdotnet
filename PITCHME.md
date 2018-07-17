@@ -25,7 +25,7 @@
 A code section has been identified as problematic in your application
 
 +++
-You suspect that some code is more time consuming than it should 
+You suspect that some code is more time / memory consuming than it should 
 
 +++
 Performance is a feature so you need to make sure of the comportement of a specific piece of code under load
@@ -35,10 +35,13 @@ Performance is a feature so you need to make sure of the comportement of a speci
 ### Benchmarking is hard 
 
 +++
-Intermediate to expert level on the runtime is needed to make sure you measure the right thing. <br /> Stopwatch is far from being sufficient to get correct metrics 
+Stopwatch is far from being sufficient to get correct metrics 
 
 +++
-Failure to isolate properly what needs benchmarking, makes metrics useless 
+Intermediate to expert level on the runtime is needed to make sure you measure the right thing. 
+
++++
+Failure to isolate properly what needs benchmarking, gives useless metrics
 
 +++
 Failure to make sufficient run of what needs benchmarking, makes metrics inacurate
@@ -67,7 +70,7 @@ Even if you get all that right, reporting things correctly, is what comes next !
 
 ## Demo
 
-C# vs F# <br /> Siblings rivalery unleashed
+### `C#` vs `F#` <br /> Siblings rivalery unleashed
 
 +++
 We implement a simple FizzBuzz 
@@ -83,8 +86,8 @@ string[] SomeImplementation(Range range);
 ```
 
 +++
-F# signature of benchmark target]
-```fs
+F# signature of benchmark target
+```fsharp
 val someImplementation : Range -> string[]
 ```
 +++
